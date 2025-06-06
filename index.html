@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gettetris</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-flex">
+    <div class="game-container">
+      <div class="game-inner-box">
+        <div class="pixel-led"></div>
+        <h1 class="game-title">Gettetris</h1>
+        <div class="row-2col">
+          <div class="score-box">Score: <span id="score">0</span></div>
+          <div class="level-box">Level: <span id="level">1</span></div>
+        </div>
+        <div class="row-3col">
+          <button id="start-btn">Start</button>
+          <button id="pause-btn">Pause</button>
+          <button id="reset-btn">Reset</button>
+        </div>
+        <div class="row-2col next-leader-row">
+          <div class="next-piece-box">
+            <div class="next-label">Next</div>
+            <canvas id="next-piece" width="60" height="60"></canvas>
+          </div>
+          <div class="top3-leaderboard">
+            <div class="top3-leaderboard-title">Leaders</div>
+            <div id="top3-leaderboard-list"></div>
+          </div>
+        </div>
+        <div class="canvas-wrapper">
+          <canvas id="tetris" width="300" height="600"></canvas>
+        </div>
+        <div id="fun-message" class="fun-message"></div>
+      </div>
+    </div>
+    <div id="highscore-modal" class="modal">
+      <div class="modal-content">
+        <h2>New High Score!</h2>
+        <input type="text" id="player-name" placeholder="Enter your name" maxlength="20">
+        <button id="save-score">Save</button>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
